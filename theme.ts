@@ -20,5 +20,21 @@ const fonts = {
   heading: "'Noto Sans', sans-serif",
 };
 
-const theme = extendTheme({ colors, fonts });
+const styles = {
+  global: () => ({
+    "html, body": {
+      letterSpacing: "-0.5px",
+    },
+  }),
+};
+
+const components = {
+  Heading: {
+    baseStyle: {
+      letterSpacing: "-1.2px",
+    },
+  },
+};
+
+const theme = extendTheme({ colors, fonts, styles, components });
 export default theme;

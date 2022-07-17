@@ -13,7 +13,13 @@ import Image from "next/image";
 
 const Sidebar = () => {
   return (
-    <Stack h="100%" spacing={0} borderRight="0.5px solid rgb(0 0 0 / 15%)">
+    <Stack
+      h="calc(100vh - 4rem)"
+      w="200px"
+      spacing={0}
+      borderRight="0.5px solid rgb(0 0 0 / 15%)"
+      position="fixed"
+    >
       <Stack
         direction="row"
         alignItems="center"
@@ -85,7 +91,6 @@ const Sidebar = () => {
         borderLeft="none"
         borderBottom="none"
         borderTopRightRadius="30px"
-        borderBottomRightRadius="30px"
         pl={4}
         pt={8}
         pb={4}
@@ -141,7 +146,7 @@ const Layout = (props: LayoutProps) => {
         }}
         minH="calc(100vh - 4rem)"
       >
-        <chakra.aside gridArea="sidebar">
+        <chakra.aside gridArea="sidebar" position="relative">
           <Sidebar />
         </chakra.aside>
 
